@@ -26,7 +26,7 @@ async function run() {
     await client.connect();
     const collection = client.db("redpositive_data").collection("persons");
     const dataCollection = client.db("redpositive_data").collection("data");
-    // get
+
     app.get("/person", async (req, res) => {
       const query = {};
       const cursor = collection.find(query);
